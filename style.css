@@ -45,8 +45,8 @@ html,body{
 .card{
    
   padding: 5rem;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-  margin-top: 50px;
+  box-shadow: 0 8px 30px rgb(44 158 255 / 22%);
+  margin-top: 100px;
   color:#222;
 }
 .card h1,
