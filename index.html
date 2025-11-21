@@ -1,192 +1,188 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <title>Wordle Unlimited</title>
 
-	<meta name="theme-color" content="#6aaa64" />
-	<link rel="manifest" href="manifest.json">
-	<link rel="shortcut icon" href="img/logo_32x32.png" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/logo_192x192.png" />
-	<link rel="stylesheet" href="global.css">
+  <meta name="description" content="Play Wordle Unlimited online for free. Enjoy unlimited Wordle puzzles without waiting for the next day. Improve your vocabulary with endless five-letter word challenges." />
+  <meta name="keywords" content="wordle unlimited, unlimited wordle game, infinite wordle online, play wordle without limits, free word puzzle game" />
+  <meta name="author" content="Wordle Unlimited Online" />
 
-	<meta name="author" content="Wordle Unlimited">
-	<meta name="description" content="Play Wordle Unlimited online for free ! Solve the Unlimited Wordle puzzle Game from The New York Times and challenge your vocabulary skills. Can you guess the word in 6 tries?" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Wordle Unlimited" />
+  <meta property="og:description" content="Play Wordle Unlimited online for free. Endless Wordle puzzles with no daily limit." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wordle-unlimited-online.github.io/" />
+  <meta property="og:image" content="https://wordle-unlimited-online.github.io/img/og_1200x630.png" />
 
-	<meta name="keywords"content="wordle, infinite wordle, wordle unlimited, wordle infinite, infinate wordle, infinte wordle, unlimited, daily wordle, wordle+, word game, puzzle, game">
+  <!-- FAQ schema for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Wordle Unlimited free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Wordle Unlimited is completely free to play online and does not require a download."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I play Wordle Unlimited at school?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, most versions of Wordle Unlimited work on school Chromebooks and classroom networks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Wordle Unlimited the same as the original Wordle?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both follow the same rules, but Wordle Unlimited removes the daily limit, allowing endless puzzles."
+        }
+      }
+    ]
+  }
+  </script>
 
-	<!-- FB Meta Tags -->
-	<meta property="og:url" content="https://wordle-unlimited-online.github.io/">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Wordle Unlimited">
-	<meta property="og:description" content="Guess the word in 6 tries. Play daily, hourly and infinite modes.">
-	<meta property="og:image" content="https://wordle-unlimited-online.github.io/img/og_1200x630.png">
+  <!-- Page styling -->
+  <link rel="stylesheet" href="style.css">
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<meta name="google-site-verification" content="nfr4xQiyHWYkamHQq6M7E9kXoXp8tmNihRU0c5yXjlw" />
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7CLFTKNYZG"></script>
-	<script>
-		if (document.location.origin === "https://wordle-unlimited-online.github.io") {
-			// Google Analytics
-			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
-			gtag('config', 'G-7CLFTKNYZG');
-
-			// PWA Service worker
-			if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js");
-		}
-	</script>
-
-	
-  <style>
-    #article-section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      font-size: 18px;
-      line-height: 1.7;
-    }
-
-    #article-section h1,
-    #article-section h2,
-    #article-section h3 {
-      font-weight: bold;
-      margin-top: 30px;
-      margin-bottom: 10px;
-    }
-
-    #article-section p {
-      margin-bottom: 15px;
-    }
-  </style>
-
-	
-	<!-- changed to something more suited to being the title of a tab in App.svelte. This title is for SEO -->
-	<title>Wordle Unlimited</title>
-<script type="module" crossorigin src="index-v1.5.2.js"></script>
-<link rel="stylesheet" href="index-v1.5.2.css">
+  <!-- Do NOT load the game JS here. The game is loaded inside game.html (iframe). -->
 </head>
-
 <body>
-	 <div id="app"></div>
 
-  <section id="article-section">
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="site-title">Wordle Unlimited</h1>
+    </div>
+  </header>
+
+  <!-- Game iframe -->
+  <main class="wrap">
+    <div class="game-frame-wrap">
+      <iframe
+        src="game.html"
+        title="Wordle Unlimited Game"
+        id="game-iframe"
+        loading="eager"
+        allow="fullscreen"
+      ></iframe>
+    </div>
+
+    <!-- Article (boxed like a blog) -->
+    <article id="article-section" class="card">
       <h1>Wordle Unlimited – Play Wordle as Much as You Want Without Limits</h1>
 
-  <p>
-    Wordle Unlimited is a free online word puzzle game that lets you enjoy unlimited rounds of Wordle without waiting for the next day. 
-    Unlike the original version, which gives you only one puzzle every 24 hours, Wordle Unlimited allows you to play again and again, 
-    making it perfect for word-lovers who want to sharpen their skills, relax, or challenge friends anytime.
-  </p>
+      <p>
+        Wordle Unlimited is a free online word puzzle game that lets you enjoy unlimited rounds of Wordle without waiting for the next day.
+        Unlike the original version, which gives you only one puzzle every 24 hours, Wordle Unlimited allows you to play again and again,
+        making it perfect for word-lovers who want to sharpen their skills, relax, or challenge friends anytime.
+      </p>
 
-  <p>
-    If you enjoy word games, brain teasers, or daily puzzles, this unlimited Wordle version gives you everything you need in one simple, 
-    easy-to-use place.
-  </p>
+      <p>
+        If you enjoy word games, brain teasers, or daily puzzles, this unlimited Wordle version gives you everything you need in one simple,
+        easy-to-use place.
+      </p>
 
-  <h2>What Is Wordle Unlimited?</h2>
+      <h2>What Is Wordle Unlimited?</h2>
 
-  <p>
-    Wordle Unlimited is an extended version of the popular Wordle game. The rules remain the same. 
-    You get six chances to guess a hidden five-letter word. Green means the letter is correct and in the right place. 
-    Yellow means the letter is correct but in the wrong place. Gray means the letter is not in the word at all.
-  </p>
+      <p>
+        Wordle Unlimited is an extended version of the popular Wordle game. The rules remain the same.
+        You get six chances to guess a hidden five-letter word. Green means the letter is correct and in the right place.
+        Yellow means the letter is correct but in the wrong place. Gray means the letter is not in the word at all.
+      </p>
 
-  <p>
-    The main difference is that you can play as many puzzles as you want without a daily limit. 
-    This makes Wordle Unlimited a top choice for players searching for long-tail terms such as 
-    "free unlimited Wordle puzzles", "Wordle game with no daily limit", and "Wordle Unlimited online no download".
-  </p>
+      <p>
+        The main difference is that you can play as many puzzles as you want without a daily limit. This makes Wordle Unlimited a top choice
+        for players searching for long-tail terms such as "free unlimited Wordle puzzles", "Wordle game with no daily limit", and
+        "Wordle Unlimited online no download".
+      </p>
 
-  <h2>Why Is Wordle Unlimited So Popular?</h2>
+      <h2>Why Is Wordle Unlimited So Popular?</h2>
 
-  <h3>No Waiting for Tomorrow</h3>
-  <p>There is no need to stop after one puzzle. Players can start a new round instantly.</p>
+      <h3>No Waiting for Tomorrow</h3>
+      <p>There is no need to stop after one puzzle. Players can start a new round instantly.</p>
 
-  <h3>Great for Practice</h3>
-  <p>
-    If you want to improve your vocabulary or prepare for the original Wordle, unlimited play helps build stronger 
-    word-guessing skills.
-  </p>
+      <h3>Great for Practice</h3>
+      <p>If you want to improve your vocabulary or prepare for the original Wordle, unlimited play helps build stronger word-guessing skills.</p>
 
-  <h3>Simple, Fast, and Free</h3>
-  <p>No accounts or downloads are required. Just guess the word and enjoy the experience.</p>
+      <h3>Simple, Fast, and Free</h3>
+      <p>No accounts or downloads are required. Just guess the word and enjoy the experience.</p>
 
-  <h3>Good for Schools and Classrooms</h3>
-  <p>
-    Because the game is kid-friendly and educational, many teachers recommend Wordle Unlimited for spelling and vocabulary practice.
-  </p>
+      <h3>Good for Schools and Classrooms</h3>
+      <p>Because the game is kid-friendly and educational, many teachers recommend Wordle Unlimited for spelling and vocabulary practice.</p>
 
-  <h2>Best Features of Wordle Unlimited</h2>
+      <h2>Best Features of Wordle Unlimited</h2>
 
-  <p><strong>Endless Word Challenges:</strong> Play as many rounds as you want with no restrictions.</p>
-  <p><strong>Difficulty Options:</strong> Some versions allow custom word lengths or hard mode.</p>
-  <p><strong>Shareable Results:</strong> Show off your winning streaks using the familiar tile pattern.</p>
-  <p><strong>Device Friendly:</strong> Works smoothly on phones, tablets, Chromebooks, and desktop computers.</p>
+      <p><strong>Endless Word Challenges:</strong> Play as many rounds as you want with no restrictions.</p>
+      <p><strong>Difficulty Options:</strong> Some versions allow custom word lengths or hard mode.</p>
+      <p><strong>Shareable Results:</strong> Show off your winning streaks using the familiar tile pattern.</p>
+      <p><strong>Device Friendly:</strong> Works smoothly on phones, tablets, Chromebooks, and desktop computers.</p>
 
-  <h2>Tips to Win More Wordle Unlimited Games</h2>
+      <h2>Tips to Win More Wordle Unlimited Games</h2>
 
-  <p>
-    <strong>Start With a Strong Opening Word:</strong> Many players prefer ADIEU, CRANE, SLATE, or AUDIO.
-  </p>
-  <p>
-    <strong>Look for Patterns:</strong> Use the hints from green and yellow letters to form smarter guesses.
-  </p>
-  <p>
-    <strong>Avoid Random Guessing:</strong> Predict the next word using logical choices.
-  </p>
-  <p>
-    <strong>Practice Daily:</strong> Unlimited puzzles allow you to improve faster than the original game.
-  </p>
+      <p><strong>Start With a Strong Opening Word:</strong> Many players prefer ADIEU, CRANE, SLATE, or AUDIO.</p>
+      <p><strong>Look for Patterns:</strong> Use the hints from green and yellow letters to form smarter guesses.</p>
+      <p><strong>Avoid Random Guessing:</strong> Predict the next word using logical choices.</p>
+      <p><strong>Practice Daily:</strong> Unlimited puzzles allow you to improve faster than the original game.</p>
 
-  <h2>Is Wordle Unlimited the Same as the Original Wordle?</h2>
+      <h2>Is Wordle Unlimited the Same as the Original Wordle?</h2>
+      <p>The gameplay is identical, but the experience is different. The original Wordle gives one puzzle per day, while Wordle Unlimited removes the waiting time.</p>
 
-  <p>
-    The gameplay is identical, but the experience is different. 
-    The original Wordle gives one puzzle per day, while Wordle Unlimited removes the waiting time. 
-    This makes the unlimited version better for players who want regular practice or extended play sessions.
-  </p>
+      <h2>Can You Play Wordle Unlimited at School or Work?</h2>
+      <p>Yes, most versions of Wordle Unlimited work on school networks, Chromebooks, and workplace computers.</p>
 
-  <h2>Can You Play Wordle Unlimited at School or Work?</h2>
+      <h2>Frequently Asked Questions</h2>
 
-  <p>
-    Yes, most versions of Wordle Unlimited work on school networks, Chromebooks, and workplace computers. 
-    Many users search for terms such as "Wordle Unlimited unblocked for school", 
-    "free Wordle games without downloads", and "browser-based word puzzle games".
-  </p>
+      <h3>Is Wordle Unlimited free?</h3>
+      <p>Yes, Wordle Unlimited is completely free to play online.</p>
 
-  <h2>Frequently Asked Questions</h2>
+      <h3>Do I need to download anything?</h3>
+      <p>No, the game runs directly in your browser without downloads.</p>
 
-  <h3>Is Wordle Unlimited free?</h3>
-  <p>Yes, Wordle Unlimited is completely free to play online.</p>
+      <h3>Can kids play Wordle Unlimited?</h3>
+      <p>Yes. It is safe, simple, and educational.</p>
 
-  <h3>Do I need to download anything?</h3>
-  <p>No, the game runs directly in your browser without downloads.</p>
+      <h3>Are the words random?</h3>
+      <p>Yes, each puzzle is generated from a large dictionary of five-letter words.</p>
 
-  <h3>Can kids play Wordle Unlimited?</h3>
-  <p>Yes. It is safe, simple, and educational.</p>
+      <h3>Does Wordle Unlimited help improve vocabulary?</h3>
+      <p>Regular play improves spelling, memory, and vocabulary skills.</p>
 
-  <h3>Are the words random?</h3>
-  <p>Yes, each puzzle is generated from a large dictionary of five-letter words.</p>
+      <h2>Conclusion</h2>
+      <p>
+        Wordle Unlimited is one of the best ways to enjoy the classic word puzzle game without limits. Whether you want to practice every day,
+        challenge yourself with unlimited rounds, or simply enjoy a relaxing brain game, this version gives you everything the original offers and more.
+      </p>
+    </article>
+  </main>
 
-  <h3>Does Wordle Unlimited help improve vocabulary?</h3>
-  <p>Regular play improves spelling, memory, and vocabulary skills.</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Wordle Unlimited • © <span id="year"></span> All rights reserved.</p>
+    </div>
+  </footer>
 
-  <h2>Conclusion</h2>
+  <script>
+    // insert current year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-  <p>
-    Wordle Unlimited is one of the best ways to enjoy the classic word puzzle game without limits. 
-    Whether you want to practice every day, challenge yourself with unlimited rounds, or simply enjoy a relaxing brain game, 
-    this version gives you everything the original offers and more. 
-    If you are searching for free unlimited Wordle gameplay or a daily puzzle alternative with no restrictions, 
-    Wordle Unlimited is the perfect choice.
-  </p>
-
-  </section>
-	  
+    // make iframe height responsive to viewport (optional improvement)
+    function resizeIframe() {
+      var ifr = document.getElementById('game-iframe');
+      if (!ifr) return;
+      // set a decent default height for desktops and smaller for mobile
+      var h = window.innerWidth > 800 ? Math.max(650, window.innerHeight * 0.6) : 600;
+      ifr.style.height = h + 'px';
+    }
+    window.addEventListener('load', resizeIframe);
+    window.addEventListener('resize', resizeIframe);
+  </script>
 </body>
-
 </html>
